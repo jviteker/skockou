@@ -27,10 +27,14 @@ npm run build
 5. Ve **Site configuration → Notifications → Emails and webhooks → Form submission notifications** nastavte e-mailové upozornění na `d.vitekerova@gmail.com`.
 6. V **Domain management** přidejte `www.jezdiskockou.cz` a nastavte DNS podle údajů, které Netlify zobrazí. Pro hlavní doménu `jezdiskockou.cz` lze nastavit přesměrování na `www`.
 
-Formulář `kontakt` odesílá Netlify Forms na stránku `/dekujeme/` a obsahuje honeypot proti jednoduchému spamu. Před nasazením domény je potřeba provést zkušební odeslání a ověřit notifikační e-mail. Dostupnost formulářů a limity se řídí aktuálním tarifem Netlify.
+Formuláře `kontakt` a `recenze` odesílá Netlify Forms na stránku `/dekujeme/` a obsahují honeypot proti jednoduchému spamu. Před nasazením domény je potřeba provést zkušební odeslání a ověřit notifikační e-mail. Dostupnost formulářů a limity se řídí aktuálním tarifem Netlify.
+
+## Recenze
+
+Recenze odeslané formulářem „Podělte se o Vaši zkušenost“ se na web nezveřejňují automaticky – přijdou do Netlify (**Forms → recenze**) a e-mailem. Zveřejnění recenze: přidejte položku do pole `reviews` na začátku souboru `src/pages/index.astro` (jméno a odstavce textu), commitněte a pushněte.
 
 ## On-line přihláška
 
 Přihláška se načítá přímo ze systému Moje-autoškola ve vloženém okně. Skript poskytovatele upravuje jeho výšku podle obsahu; odkaz nad formulářem umožňuje přihlášku otevřít také samostatně. Údaje z přihlášky se odesílají do Moje-autoškola, nikoli do Netlify Forms. Po nasazení ověřte načtení přihlášky a její odeslání přímo v systému poskytovatele.
 
-Fotografie rukou na volantu je stažena z [Pexels](https://www.pexels.com/photo/woman-hands-holding-steering-wheel-12932833/); hravá fotografie kočky je převzata z původního webu.
+Fotografie rukou na volantu je stažena z [Pexels](https://www.pexels.com/photo/woman-hands-holding-steering-wheel-12932833/); hravá fotografie kočky a ilustrace kočky v sekci „O mně“ jsou převzaty z původního webu.

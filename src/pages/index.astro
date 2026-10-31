@@ -6,6 +6,76 @@ const applicationPdf =
 const phone = "+420 773 622 333";
 const phoneLink = "+420773622333";
 const email = "d.vitekerova@gmail.com";
+
+const aboutPillars = [
+  {
+    title: "Jeden lektor, jedno auto:",
+    text: "Po celou dobu výcviku se budeš setkávat jen se mnou a jezdit budeme ve stejném, prověřeném vozidle. Nemusíš si zvykat na nikoho jiného.",
+  },
+  {
+    title: "Metodika na míru:",
+    text: "Výuku stavím na moderních a profesionálních postupech. Tempo přizpůsobím tvým schopnostem, ale vždy s jasným plánem a cílem.",
+  },
+  {
+    title: "Skutečná příprava na realitu:",
+    text: 'Nebudeme se učit jen "na zkoušky". Naučím tě předvídat, řešit krizové situace s chladnou hlavou a jezdit tak, abys byla v bezpečí ty i tvé okolí.',
+  },
+];
+
+const reviews = [
+  {
+    name: "Olena Dovbak",
+    paragraphs: [
+      "Obrovské poděkování paní Dagmar Vitekerové.",
+      "Je to vyborna instruktorka - velmi trpělivá, klidná, milá a ochotná. Vždy mi vse srozumitelne vysvetlila, pomohla mi opravit chyby a dodávala mi sebevědomí za volantem. Diky jejimu přistupu jsem se naucila ridit s vetsi jistotou a zkoušku jsem zvládla úspěšně.",
+      "Moc děkuji paní Dagmar za její čas, podporu a lidský přistup.",
+    ],
+  },
+  {
+    name: "Evelína Kokešová",
+    paragraphs: [
+      "S autoškolou jsem byla velmi spokojená, přesvědčili mě o tom, že ne z každé autoškoly musí mít člověk strach. Skvělí a ochotní instruktoři moje byla paní Vitekerová svělá🙏🏽❤️, kteří ví co dělají a dávají do toho vše! Z jízd si odnáším jen pozitivní zkušenosti a na každou jízdu jsem se vždy těšila. …",
+    ],
+  },
+  {
+    name: "Ivana Jarošová",
+    paragraphs: [
+      "Udělat si řidičský průkaz jsem poměrně dlouho odkládala, ale když jsem naznala, že nastal čas, nemohl si mě vzít pod křídla nikdo lepší než paní Dagmar. Její přístup je naprosto lidský, na nic si s vámi nehraje a jasně a pragmaticky vás vede krok za krokem s naprostým klidem a přátelskou atmosférou. I o komické momenty není nouze. Pokud dojde ke stresující situaci (jakože v Brně jich je dost), dokáže vás podržet. Díky ní jsem nabyla sebevědomí, a dá se říct, že i jistého klidu za volantem. Pakliže někdy v budoucnu dojde na kondičky, nebudu váhat oslovit opět Dagmar.",
+    ],
+  },
+  {
+    name: "Ксенія Гунько",
+    paragraphs: [
+      "dělala jsem kurz s paní učitelkou Vitekerovou, je to skvělá učitelka, všechno vysvětluje srozumitelně, a vždycky se ptá co potřebujeme spolu ještě probrat, a se mnou to probírala třeba tak 100 krát, ale vždycky byla na mě hodná. A přesně díky ní jsem si i udělala na poprvé testy a napodruhé jízdy . Je úžasná učitelka.",
+    ],
+  },
+  {
+    name: "Nela Matějíčková",
+    paragraphs: [
+      "Celkově jsem s autoškolou velmi spokojená. Vše mi bylo vysvětleno, komunikace byla v pořádku.",
+      "S paní učitelkou jízd Vitekerovou jsem byla nesmírně spokojena, jízdy probíhaly v pořádku, vše mi bylo vysvětleno, cítila jsem se za volantem bezpečně, veškerá komunikace byla v pořádku.",
+    ],
+  },
+  {
+    name: "Karolína Zapletalová",
+    paragraphs: [
+      "Chtěla bych se podělit o mou velice pozitivní zkušenost s touto autoškolou.Teoretické lekce probíhaly vždy v milém duchu. Také bych chtěla moc poděkovat paní instruktorce Vitekerové, kterou jsem měla po celou dobu na jízdy. Pokaždé byla moc hodná a nikdy jsem se necítila pod tlakem nebo ve stresu. Velmi si važím jejího profesionálního a vlídného přístupu.",
+    ],
+  },
+  {
+    name: "Anna Šustková",
+    paragraphs: [
+      'S autoškolou  mám velmi pozitivní zkušenost - absolvovala jsem kondiční jízdy s lektorkou paní Vitekerovou. Oceňuji především individuální přístup a to, že jsou lekce skutečně "šité na míru". Navíc se vše odehrává v přátelské atmosféře a nechybí ani smysl pro humor, takze si z jizd odnesete nejen větsi jistotu za volantem, ale i příjemný zážitek:)',
+    ],
+  },
+];
+
+const initials = (name: string) =>
+  name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2);
 ---
 
 <!doctype html>
@@ -28,8 +98,9 @@ const email = "d.vitekerova@gmail.com";
         <span>Jezdi s Kočkou<span class="wordmark-dot">.</span></span>
       </a>
       <nav class="main-nav" aria-label="Hlavní navigace">
-        <a href="#kurz">Kurz</a>
-        <a href="#vyuka">Výuka</a>
+        <a href="#o-mne">O mně</a>
+        <a class="nav-wide-only" href="#vyuka">Výuka</a>
+        <a href="#reference">Reference</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
       <a class="header-cta" href="#prihlaska">
@@ -51,7 +122,7 @@ const email = "d.vitekerova@gmail.com";
           <a class="button button-light" href="#kurz">
             Jezdi jako kočka! Jezdi s kočkou! <span aria-hidden="true">↓</span>
           </a>
-          <span class="hero-index">01 <i></i> 04</span>
+          <span class="hero-index">01 <i></i> 05</span>
         </div>
         <div class="hero-note">
           <span class="hero-note-mark" aria-hidden="true">✳</span>
@@ -81,10 +152,75 @@ const email = "d.vitekerova@gmail.com";
         </div>
       </section>
 
+      <section class="about" id="o-mne" aria-labelledby="about-title">
+        <div class="about-inner section-wrap">
+          <div class="about-top" data-reveal>
+            <p class="eyebrow"><span></span> O mně</p>
+            <span class="section-number">02 / 05</span>
+          </div>
+          <figure class="about-figure" data-reveal>
+            <img
+              src="/images/cat-illustration.jpg"
+              alt="Ilustrace hnědé kočky"
+              width="760"
+              height="1070"
+              loading="lazy"
+            />
+            <figcaption>Dagmar Vitekerová</figcaption>
+          </figure>
+          <div class="about-copy" data-reveal>
+            <h2 id="about-title">O mně<span class="accent">.</span></h2>
+            <p class="about-lead">
+              Řízení mě opravdu baví a mé nadšení ráda předám i tobě – ať už tě čeká kompletní příprava na
+              řidičák skupiny B, nebo se chceš vrátit za volant v kondičních jízdách.
+            </p>
+            <p>
+              Vím, že hustý provoz, rozjezdy do kopce nebo parkování mohou vyvolávat obavy. Sama jsem kdysi
+              začínala a vím, jak důležitá je podpora. Proto ke všemu přistupuji s maximálním pochopením a
+              lidskostí – u mě v autě se nekřičí ani nestresuje. Každá chyba je prostě jen prostor k učení.
+            </p>
+          </div>
+          <div class="about-pillars" data-reveal>
+            <h3 class="about-pillars-title">Zázemí rodinné autoškoly s profi přístupem:</h3>
+            <ol class="pillar-list">
+              {
+                aboutPillars.map((pillar, index) => (
+                  <li class="pillar">
+                    <span class="pillar-number" aria-hidden="true">
+                      0{index + 1}
+                    </span>
+                    <h4>{pillar.title}</h4>
+                    <p>{pillar.text}</p>
+                  </li>
+                ))
+              }
+            </ol>
+          </div>
+          <div class="about-closing" data-reveal>
+            <p>
+              V podporující atmosféře si vyzkoušíš vše, co tě na cestách může potkat. Naším společným cílem
+              je, ses za volantem cítila přirozeně, sebejistě a měla z jízdy skvělý pocit – hlavně pak, až
+              vyrazíš na cesty úplně sama.
+            </p>
+            <div class="about-duration">
+              <span class="duration-number" aria-hidden="true">12<small>týdnů</small></span>
+              <p>
+                <strong>Jak dlouho výcvik trvá?</strong> Celý základní výcvik standardně trvá 12 týdnů. Tento čas
+                je profesionálně rozvržen tak, aby poskytl ideální prostor pro klidné, postupné zvládnutí teorie i
+                praxe, aniž bychom cokoli uspěchali nebo zanedbali.
+              </p>
+            </div>
+            <a class="button button-dark" href="#prihlaska">
+              jdu do toho s kočkou <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="intro section-wrap" id="vyuka" aria-labelledby="intro-title">
         <div class="intro-aside" data-reveal>
           <p class="eyebrow"><span></span> Jezdi s Kočkou</p>
-          <span class="section-number">02 / 04</span>
+          <span class="section-number">03 / 05</span>
         </div>
         <div class="intro-copy" data-reveal>
           <h2 id="intro-title">Jezdi jako<br />kočka<span class="accent">.</span></h2>
@@ -121,10 +257,71 @@ const email = "d.vitekerova@gmail.com";
         <span class="portrait-deco" aria-hidden="true">✳</span>
       </section>
 
+      <section class="reviews" id="reference" aria-labelledby="reviews-title">
+        <div class="section-wrap">
+          <div class="reviews-heading" data-reveal>
+            <div>
+              <p class="eyebrow"><span></span> Reference</p>
+              <h2 id="reviews-title">Reference<span class="accent">.</span></h2>
+            </div>
+            <span class="section-number">04 / 05</span>
+          </div>
+          <div class="review-grid">
+            {
+              reviews.map((review) => (
+                <figure class="review-card" data-reveal>
+                  <span class="review-quote" aria-hidden="true">
+                    “
+                  </span>
+                  <blockquote>
+                    {review.paragraphs.map((paragraph) => (
+                      <p>{paragraph}</p>
+                    ))}
+                  </blockquote>
+                  <figcaption>
+                    <span class="review-avatar" aria-hidden="true">
+                      {initials(review.name)}
+                    </span>
+                    {review.name}
+                  </figcaption>
+                </figure>
+              ))
+            }
+          </div>
+          <div class="review-form-wrap" data-reveal>
+            <h3>Podělte se o Vaši zkušenost</h3>
+            <form
+              class="review-form"
+              name="recenze"
+              method="POST"
+              action="/dekujeme/"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="recenze" />
+              <p class="honeypot">
+                <label>Nevyplňujte toto pole: <input name="bot-field" /></label>
+              </p>
+              <div class="review-field">
+                <label for="review-name">Vaše jméno</label>
+                <input id="review-name" name="Vaše jméno" type="text" autocomplete="name" required />
+              </div>
+              <div class="review-field review-field-wide">
+                <label for="review-text">Recenze</label>
+                <textarea id="review-text" name="Recenze" rows="4" required></textarea>
+              </div>
+              <button class="button button-dark" type="submit">
+                Odeslat <span aria-hidden="true">↗</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <section class="application section-wrap" id="prihlaska" aria-labelledby="application-title">
         <div class="application-top" data-reveal>
           <p class="eyebrow"><span></span> Přihláška</p>
-          <span class="section-number">03 / 04</span>
+          <span class="section-number">05 / 05</span>
         </div>
         <div class="application-content" data-reveal>
           <h2 id="application-title">První krok<br />je <em>váš.</em></h2>
@@ -671,6 +868,325 @@ const email = "d.vitekerova@gmail.com";
     margin-top: 28px;
   }
 
+  .about {
+    background: var(--paper-deep);
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 0.75fr 1.45fr;
+    column-gap: 7%;
+    row-gap: 72px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  .about-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / -1;
+    margin-bottom: -24px;
+  }
+
+  .about-figure {
+    position: relative;
+    align-self: start;
+    margin: 0;
+    padding: 18px 18px 48px;
+    background: white;
+    box-shadow: 0 24px 50px -28px rgba(45, 31, 46, 0.45);
+    transform: rotate(-3deg);
+  }
+
+  .about-figure::before {
+    position: absolute;
+    z-index: -1;
+    top: -28px;
+    right: -34px;
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #f5b5a5;
+    content: "";
+  }
+
+  .about-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-figure figcaption {
+    position: absolute;
+    bottom: 14px;
+    left: 18px;
+    font-family: var(--serif);
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .about-copy h2 {
+    margin: -12px 0 30px;
+    font-family: var(--serif);
+    font-size: clamp(70px, 10.1vw, 137px);
+    font-weight: 500;
+    letter-spacing: -0.085em;
+    line-height: 0.86;
+  }
+
+  .about-lead {
+    margin: 0 0 22px;
+    font-family: var(--serif);
+    font-size: clamp(20px, 2vw, 25px);
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+  }
+
+  .about-copy > p:not(.about-lead),
+  .about-closing > p {
+    max-width: 560px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-pillars {
+    grid-column: 1 / -1;
+  }
+
+  .about-pillars-title {
+    margin: 0 0 26px;
+    font-family: var(--serif);
+    font-size: clamp(24px, 2.6vw, 34px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+
+  .pillar-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pillar {
+    border-top: 2px solid var(--accent);
+    padding: 26px 26px 30px;
+    background: var(--paper);
+  }
+
+  .pillar-number {
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 13px;
+  }
+
+  .pillar h4 {
+    margin: 14px 0 10px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .pillar p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .about-closing {
+    grid-column: 2;
+  }
+
+  .about-closing > p {
+    margin: 0 0 34px;
+  }
+
+  .about-duration {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 34px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
+  }
+
+  .duration-number {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 76px;
+    letter-spacing: -0.06em;
+    line-height: 0.85;
+  }
+
+  .duration-number small {
+    margin-top: 8px;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .about-duration p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about-duration strong {
+    color: var(--ink);
+  }
+
+  .reviews {
+    padding: 130px 0 120px;
+  }
+
+  .reviews-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  .reviews-heading h2 {
+    margin: 26px 0 0;
+    font-family: var(--serif);
+    font-size: clamp(64px, 9vw, 120px);
+    font-weight: 500;
+    letter-spacing: -0.08em;
+    line-height: 0.9;
+  }
+
+  .review-grid {
+    columns: 3;
+    column-gap: 22px;
+  }
+
+  .review-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 22px;
+    border: 1px solid var(--line);
+    padding: 34px 28px 26px;
+    background: white;
+    break-inside: avoid;
+  }
+
+  .review-quote {
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    color: #f5b5a5;
+    font-family: var(--serif);
+    font-size: 78px;
+    line-height: 1;
+  }
+
+  .review-card blockquote {
+    margin: 0;
+  }
+
+  .review-card blockquote p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .review-card figcaption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .review-avatar {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--paper-deep);
+    color: var(--plum);
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .review-form-wrap {
+    margin-top: 58px;
+    border-top: 1px solid var(--line);
+    padding-top: 46px;
+  }
+
+  .review-form-wrap h3 {
+    margin: 0 0 24px;
+    font-family: var(--serif);
+    font-size: clamp(25px, 3vw, 36px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+
+  .review-form {
+    display: grid;
+    grid-template-columns: 0.8fr 1.6fr;
+    align-items: start;
+    gap: 26px;
+  }
+
+  .review-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-field label {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .review-field input,
+  .review-field textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(45, 31, 46, 0.35);
+    border-radius: 0;
+    outline: none;
+    padding: 8px 0 12px;
+    background: transparent;
+    color: var(--ink);
+    font-size: 14px;
+    resize: vertical;
+  }
+
+  .review-field textarea {
+    min-height: 46px;
+  }
+
+  .review-field input:focus,
+  .review-field textarea:focus {
+    border-color: var(--accent);
+  }
+
+  .review-form .button {
+    grid-column: 2;
+    justify-self: start;
+    cursor: pointer;
+  }
+
   .portrait-band {
     position: relative;
     display: grid;
@@ -907,6 +1423,8 @@ const email = "d.vitekerova@gmail.com";
 
   .contact-form-wrap input:focus-visible,
   .contact-form-wrap textarea:focus-visible,
+  .review-field input:focus-visible,
+  .review-field textarea:focus-visible,
   a:focus-visible,
   button:focus-visible {
     outline: 2px solid #f5b5a5;
@@ -1039,6 +1557,22 @@ const email = "d.vitekerova@gmail.com";
       gap: 9%;
     }
 
+    .about-inner {
+      grid-template-columns: 0.7fr 1.6fr;
+      column-gap: 5%;
+      padding-top: 105px;
+      padding-bottom: 105px;
+    }
+
+    .pillar {
+      padding: 22px 18px 24px;
+    }
+
+    .review-grid {
+      columns: 2;
+    }
+
+
     .application {
       grid-template-columns: 0.6fr 1.45fr;
     }
@@ -1077,6 +1611,10 @@ const email = "d.vitekerova@gmail.com";
     .main-nav {
       gap: 10px;
       font-size: 9px;
+    }
+
+    .nav-wide-only {
+      display: none;
     }
 
     .header-cta {
@@ -1207,6 +1745,90 @@ const email = "d.vitekerova@gmail.com";
     .portrait-band {
       min-height: 0;
       grid-template-columns: 1fr;
+    }
+
+    .about-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-top: 86px;
+      padding-bottom: 88px;
+    }
+
+    .about-top {
+      margin-bottom: 56px;
+    }
+
+    .about-figure {
+      width: min(68%, 260px);
+      margin: 0 auto 64px;
+      padding: 12px 12px 38px;
+    }
+
+    .about-figure::before {
+      top: -20px;
+      right: -24px;
+      width: 80px;
+    }
+
+    .about-figure figcaption {
+      bottom: 10px;
+      left: 12px;
+      font-size: 13px;
+    }
+
+    .about-copy h2 {
+      margin: 0 0 24px;
+      font-size: clamp(76px, 19vw, 105px);
+    }
+
+    .about-pillars {
+      margin-top: 44px;
+    }
+
+    .pillar-list {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .about-closing {
+      margin-top: 44px;
+    }
+
+    .about-duration {
+      gap: 20px;
+    }
+
+    .duration-number {
+      font-size: 58px;
+    }
+
+    .reviews {
+      padding: 80px 0 84px;
+    }
+
+    .reviews-heading {
+      margin-bottom: 40px;
+    }
+
+    .reviews-heading h2 {
+      font-size: clamp(58px, 16vw, 90px);
+    }
+
+    .review-grid {
+      columns: 1;
+    }
+
+    .review-card {
+      padding: 30px 22px 22px;
+    }
+
+    .review-form {
+      grid-template-columns: 1fr;
+    }
+
+    .review-form .button {
+      grid-column: auto;
     }
 
     .portrait-photo {
