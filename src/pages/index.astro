@@ -1,0 +1,1342 @@
+---
+const applicationUrl = "https://jezdiskockou.moje-autoskola.cz/prihlaska.php";
+const applicationEmbedUrl = `${applicationUrl}?iframe=1`;
+const applicationPdf =
+  "https://md.gov.cz/getattachment/Dokumenty/Silnicni-doprava/Ridicske-prukazy,Autoskoly/Zadost-o-prijeti-k-vyuce-a-vycviku/zaDOSTOPrIJETikvyuceavycviku2013-(1).pdf.aspx?lang=cs-CZ";
+const phone = "+420 773 622 333";
+const phoneLink = "+420773622333";
+const email = "d.vitekerova@gmail.com";
+---
+
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Autoškola pro holky. Individuální výuka skupiny B a kondiční jízdy pro Brno a okolí."
+    />
+    <meta name="theme-color" content="#faf3f4" />
+    <link rel="canonical" href="https://www.jezdiskockou.cz/" />
+    <title>Jezdi s Kočkou — Autoškola pro holky v Brně</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#uvod" aria-label="Jezdi s Kočkou – úvod">
+        <span class="wordmark-icon" aria-hidden="true">J</span>
+        <span>Jezdi s Kočkou<span class="wordmark-dot">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Hlavní navigace">
+        <a href="#kurz">Kurz</a>
+        <a href="#vyuka">Výuka</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="header-cta" href="#prihlaska">
+        Přihláška <span aria-hidden="true">↓</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="uvod" aria-labelledby="hero-title">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow light-eyebrow"><span></span> Autoškola · Brno</p>
+          <h1 id="hero-title">Autoškola<br />pro <em>holky.</em></h1>
+          <div class="hero-copy">
+            <p>Kočka je odvážná, bystrá, hbitá, nebojácná.</p>
+            <p>Kočka je pozorná a ostražitá.</p>
+          </div>
+          <a class="button button-light" href="#kurz">
+            Jezdi jako kočka! Jezdi s kočkou! <span aria-hidden="true">↓</span>
+          </a>
+          <span class="hero-index">01 <i></i> 04</span>
+        </div>
+        <div class="hero-note">
+          <span class="hero-note-mark" aria-hidden="true">✳</span>
+          <span>Jezdi jako kočka!<br />Jezdi s kočkou!</span>
+        </div>
+      </section>
+
+      <section class="course section-wrap" id="kurz" aria-labelledby="course-title">
+        <div class="course-label" data-reveal>
+          <p class="eyebrow"><span></span> Nový kurz</p>
+          <p class="course-dates">1.3. - 31.5. 2027</p>
+        </div>
+        <div class="course-main" data-reveal>
+          <h2 id="course-title">ZAHÁJENÍ<br />NOVÉHO KURZU<span class="accent">!!!</span></h2>
+          <div class="button-row">
+            <a class="button button-dark" href="#prihlaska">
+              přihlášky zde: <span aria-hidden="true">↓</span>
+            </a>
+            <a class="text-link" href={applicationPdf} target="_blank" rel="noreferrer">
+              Stáhnout žádost o přijetí <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="course-stamp" aria-hidden="true">
+          <span>JEZDI<br />S KOČKOU</span>
+          <span class="stamp-star">✳</span>
+        </div>
+      </section>
+
+      <section class="intro section-wrap" id="vyuka" aria-labelledby="intro-title">
+        <div class="intro-aside" data-reveal>
+          <p class="eyebrow"><span></span> Jezdi s Kočkou</p>
+          <span class="section-number">02 / 04</span>
+        </div>
+        <div class="intro-copy" data-reveal>
+          <h2 id="intro-title">Jezdi jako<br />kočka<span class="accent">.</span></h2>
+          <p class="intro-lead">Jezdi jako kočka! Jezdi s kočkou!</p>
+          <div class="service-list">
+            <article class="service-item">
+              <span class="service-icon" aria-hidden="true">01</span>
+              <div>
+                <h3>Individuální výuka skupiny B</h3>
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-item">
+              <span class="service-icon" aria-hidden="true">02</span>
+              <div>
+                <h3>KONDIČNÍ JÍZDY pro Brno a okolí</h3>
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+          </div>
+          <a class="button button-dark intro-cta" href={`tel:${phoneLink}`}>
+            Domluvit jízdu <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="portrait-band" aria-label="Jezdi s Kočkou">
+        <div class="portrait-photo" role="img" aria-label="Kočka za volantem"></div>
+        <div class="portrait-message">
+          <p class="eyebrow light-eyebrow"><span></span> Jezdi s Kočkou</p>
+          <p class="portrait-quote">„Jezdi jako kočka!<br />Jezdi s kočkou!“</p>
+          <span class="portrait-name">Dagmar Vitekerová</span>
+        </div>
+        <span class="portrait-deco" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="application section-wrap" id="prihlaska" aria-labelledby="application-title">
+        <div class="application-top" data-reveal>
+          <p class="eyebrow"><span></span> Přihláška</p>
+          <span class="section-number">03 / 04</span>
+        </div>
+        <div class="application-content" data-reveal>
+          <h2 id="application-title">První krok<br />je <em>váš.</em></h2>
+          <div class="button-row">
+            <a class="button button-dark" href="#online-prihlaska">
+              Vyplnit přihlášku <span aria-hidden="true">↓</span>
+            </a>
+            <a class="text-link" href={applicationPdf} target="_blank" rel="noreferrer">
+              Žádost o přijetí k výuce a výcviku <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="application-mark" aria-hidden="true">B</div>
+        <div class="application-form" id="online-prihlaska">
+          <div class="application-form-heading">
+            <h3>On-line přihláška</h3>
+            <a class="text-link" href={applicationUrl} target="_blank" rel="noopener noreferrer">
+              Otevřít přihlášku samostatně <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <iframe
+            id="ma_iframe"
+            src={applicationEmbedUrl}
+            title="On-line přihláška do autoškoly Jezdi s Kočkou"
+            width="100%"
+            height="1050"
+            loading="lazy"
+          ></iframe>
+          <p class="application-credit">
+            On-line přihlašování žáků do autoškoly zajišťuje software
+            <a href="https://www.moje-autoskola.cz" target="_blank" rel="noopener noreferrer">MOJE AUTOŠKOLA</a>
+            -
+            <a href="https://www.moje-autoskola.cz" target="_blank" rel="noopener noreferrer">software pro autoškoly</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="kontakt" aria-labelledby="contact-title">
+        <div class="contact-inner section-wrap">
+          <div class="contact-heading" data-reveal>
+            <p class="eyebrow light-eyebrow"><span></span> Ozvěte se</p>
+            <h2 id="contact-title">Kontakt<span class="accent">.</span></h2>
+            <p class="contact-name">Jezdi s Kočkou<br />Dagmar Vitekerová</p>
+            <a class="contact-phone" href={`tel:${phoneLink}`}>{phone}</a>
+            <a class="contact-email" href={`mailto:${email}`}>{email}</a>
+            <p class="contact-address">
+              <span>provozovna: Minská 83,</span>
+              Brno - Žabovřesky
+            </p>
+            <p class="contact-hours">otevřeno po telefonické domluvě</p>
+            <p class="social-link">@jezdiskočkou</p>
+          </div>
+          <div class="contact-form-wrap" data-reveal>
+            <p class="eyebrow light-eyebrow"><span></span> Napište mi</p>
+            <form
+              name="kontakt"
+              method="POST"
+              action="/dekujeme/"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="kontakt" />
+              <p class="honeypot">
+                <label>Nevyplňujte toto pole: <input name="bot-field" /></label>
+              </p>
+              <label for="name">Jméno a příjmení</label>
+              <input id="name" name="Jméno a příjmení" type="text" autocomplete="name" required />
+              <label for="email">E-mail</label>
+              <input id="email" name="E-mail" type="email" autocomplete="email" required />
+              <label for="message">Zpráva</label>
+              <textarea id="message" name="Zpráva" rows="4" required></textarea>
+              <button class="button button-light submit-button" type="submit">
+                Odeslat zprávu <span aria-hidden="true">↗</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#uvod">
+        <span class="wordmark-icon" aria-hidden="true">J</span>
+        <span>Jezdi s Kočkou<span class="wordmark-dot">.</span></span>
+      </a>
+      <span>ič: 87376181</span>
+      <a href="#uvod">Zpět nahoru ↑</a>
+    </footer>
+    <script
+      is:inline
+      src="https://jezdiskockou.moje-autoskola.cz/js/iframe-resizer/iframeResizer.min.js"
+    ></script>
+    <script is:inline>
+      iFrameResize({}, "#ma_iframe");
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --paper: #faf3f4;
+    --paper-deep: #f1e3e8;
+    --ink: #2d1f2e;
+    --muted: #7d707c;
+    --accent: #d8665a;
+    --plum: #492b49;
+    --line: rgba(45, 31, 46, 0.18);
+    --sans: "Segoe UI", Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+  }
+
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  .site-header {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 84px;
+    padding: 0 7.1%;
+    color: white;
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+
+  .wordmark-icon {
+    display: grid;
+    width: 31px;
+    height: 31px;
+    place-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .wordmark-dot,
+  .accent {
+    color: var(--accent);
+  }
+
+  .main-nav {
+    display: flex;
+    gap: clamp(24px, 4vw, 58px);
+    margin-left: 9%;
+    font-size: 12px;
+  }
+
+  .main-nav a,
+  .header-cta,
+  .text-link,
+  .site-footer a {
+    transition: opacity 180ms ease;
+  }
+
+  .main-nav a:hover,
+  .header-cta:hover,
+  .text-link:hover,
+  .site-footer a:hover {
+    opacity: 0.68;
+  }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+    padding: 10px 0;
+    font-size: 12px;
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    min-height: min(790px, 100svh);
+    align-items: center;
+    overflow: hidden;
+    background: #312432;
+    color: white;
+  }
+
+  .hero-image,
+  .hero-shade {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-image {
+    background-image: url("/images/woman-driving.jpg");
+    background-position: center 54%;
+    background-size: cover;
+    transform: scale(1.02);
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(90deg, rgba(34, 20, 36, 0.82) 0%, rgba(34, 20, 36, 0.54) 48%, rgba(34, 20, 36, 0.08) 100%),
+      linear-gradient(0deg, rgba(34, 20, 36, 0.28), transparent 38%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(760px, 80%);
+    margin: 50px 0 0 12.2%;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow > span {
+    display: inline-block;
+    width: 23px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .light-eyebrow {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero h1 {
+    margin: 26px 0 24px;
+    font-family: var(--serif);
+    font-size: clamp(64px, 9.2vw, 132px);
+    font-weight: 500;
+    letter-spacing: -0.065em;
+    line-height: 0.9;
+  }
+
+  .hero h1 em,
+  .application h2 em {
+    color: #f5b5a5;
+    font-weight: 500;
+  }
+
+  .hero-copy {
+    margin: 0 0 31px 5px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(13px, 1.15vw, 15px);
+    line-height: 1.8;
+  }
+
+  .hero-copy p {
+    margin: 0;
+  }
+
+  .button {
+    display: inline-flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    transition:
+      background 180ms ease,
+      color 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-light {
+    border-color: rgba(255, 255, 255, 0.68);
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+  }
+
+  .button-light:hover {
+    background: white;
+    color: var(--ink);
+  }
+
+  .button-dark {
+    background: var(--ink);
+    color: white;
+  }
+
+  .button-dark:hover {
+    background: var(--accent);
+  }
+
+  .hero-index {
+    position: absolute;
+    right: -25%;
+    bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-index i {
+    width: 42px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.68);
+  }
+
+  .hero-note {
+    position: absolute;
+    right: 7.2%;
+    bottom: 11%;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: white;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .hero-note-mark {
+    color: #f5b5a5;
+    font-size: 28px;
+  }
+
+  .section-wrap {
+    width: min(1100px, 78%);
+    margin: 0 auto;
+  }
+
+  .course {
+    position: relative;
+    display: grid;
+    min-height: 360px;
+    grid-template-columns: 0.82fr 1.4fr 0.45fr;
+    align-items: center;
+    gap: 4%;
+    border-bottom: 1px solid var(--line);
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .course-label {
+    align-self: start;
+    padding-top: 102px;
+  }
+
+  .course-dates {
+    margin: 20px 0 0;
+    font-family: var(--serif);
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+  }
+
+  .course-dates span {
+    color: var(--accent);
+  }
+
+  .course-main h2 {
+    margin: 0 0 17px;
+    font-family: var(--serif);
+    font-size: clamp(38px, 5vw, 67px);
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    line-height: 0.98;
+  }
+
+  .course-main > p,
+  .intro-copy > p:not(.intro-lead),
+  .application-content > p {
+    max-width: 430px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .button-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 26px;
+    margin-top: 25px;
+  }
+
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border-bottom: 1px solid var(--line);
+    padding: 8px 0;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .course-stamp {
+    position: relative;
+    display: grid;
+    width: 105px;
+    aspect-ratio: 1;
+    place-items: center;
+    justify-self: end;
+    border: 1px solid rgba(216, 102, 90, 0.48);
+    border-radius: 50%;
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 13px;
+    line-height: 1.1;
+    text-align: center;
+    transform: rotate(12deg);
+  }
+
+  .stamp-star {
+    position: absolute;
+    right: -8px;
+    bottom: 3px;
+    background: var(--paper);
+    font-family: var(--sans);
+    font-size: 26px;
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: 0.75fr 1.45fr;
+    gap: 7%;
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  .intro-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .section-number {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .intro-copy h2,
+  .application h2 {
+    margin: -17px 0 20px;
+    font-family: var(--serif);
+    font-size: clamp(70px, 10.1vw, 137px);
+    font-weight: 500;
+    letter-spacing: -0.085em;
+    line-height: 0.86;
+  }
+
+  .intro-lead {
+    margin: 0 0 7px;
+    font-family: var(--serif);
+    font-size: 22px;
+  }
+
+  .service-list {
+    margin-top: 39px;
+    border-top: 1px solid var(--line);
+  }
+
+  .service-item {
+    display: grid;
+    grid-template-columns: 44px 1fr 20px;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--line);
+    padding: 21px 0;
+  }
+
+  .service-icon {
+    color: var(--accent);
+    font-family: var(--serif);
+    font-size: 13px;
+  }
+
+  .service-item h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .service-item p {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .service-arrow {
+    color: var(--accent);
+  }
+
+  .intro-cta {
+    margin-top: 28px;
+  }
+
+  .portrait-band {
+    position: relative;
+    display: grid;
+    min-height: 480px;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    background: var(--plum);
+    color: white;
+  }
+
+  .portrait-photo {
+    min-height: 480px;
+    background-image:
+      linear-gradient(0deg, rgba(49, 27, 49, 0.05), rgba(49, 27, 49, 0.05)),
+      url("/images/cat-driver.jpeg");
+    background-position: center 42%;
+    background-size: cover;
+  }
+
+  .portrait-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 12%;
+  }
+
+  .portrait-quote {
+    margin: 33px 0 29px;
+    font-family: var(--serif);
+    font-size: clamp(35px, 5.4vw, 72px);
+    letter-spacing: -0.06em;
+    line-height: 1.04;
+  }
+
+  .portrait-name {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+  }
+
+  .portrait-deco {
+    position: absolute;
+    right: 7%;
+    bottom: -34px;
+    color: rgba(245, 181, 165, 0.22);
+    font-size: 170px;
+    line-height: 1;
+  }
+
+  .application {
+    position: relative;
+    display: grid;
+    min-height: 540px;
+    grid-template-columns: 0.72fr 1.25fr 0.4fr;
+    align-items: center;
+    column-gap: 7%;
+    overflow: hidden;
+    padding-bottom: 96px;
+  }
+
+  .application-top {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 87px 0;
+  }
+
+  .application h2 {
+    margin: 0 0 25px;
+    font-size: clamp(70px, 9vw, 115px);
+  }
+
+  .application-mark {
+    color: rgba(216, 102, 90, 0.11);
+    font-family: var(--serif);
+    font-size: clamp(200px, 32vw, 420px);
+    font-weight: 700;
+    line-height: 0.8;
+    transform: rotate(-8deg);
+  }
+
+  .application-form {
+    position: relative;
+    z-index: 1;
+    grid-column: 1 / -1;
+    min-width: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 42px;
+  }
+
+  .application-form-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-bottom: 22px;
+  }
+
+  .application-form-heading h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(25px, 3vw, 36px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+
+  .application-form iframe {
+    display: block;
+    width: 100%;
+    height: 1050px;
+    border: 1px solid var(--line);
+    background: white;
+  }
+
+  .application-credit {
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .application-credit a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .contact {
+    background: var(--plum);
+    color: white;
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 15%;
+    padding-top: 100px;
+    padding-bottom: 104px;
+  }
+
+  .contact-heading h2 {
+    margin: 29px 0 27px;
+    font-family: var(--serif);
+    font-size: clamp(70px, 9vw, 116px);
+    font-weight: 500;
+    letter-spacing: -0.08em;
+    line-height: 0.9;
+  }
+
+  .contact-name {
+    margin: 0 0 23px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .contact-phone,
+  .contact-email {
+    display: table;
+    margin: 7px 0;
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.4vw, 29px);
+    letter-spacing: -0.03em;
+  }
+
+  .contact-phone:hover,
+  .contact-email:hover {
+    color: #f5b5a5;
+  }
+
+  .contact-address {
+    margin: 31px 0 0;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .contact-address span {
+    display: block;
+    margin-bottom: 7px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    text-transform: none;
+  }
+
+  .contact-hours,
+  .social-link {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+  }
+
+  .social-link {
+    display: inline-flex;
+    gap: 12px;
+    margin-top: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    padding-bottom: 7px;
+  }
+
+  .contact-form-wrap {
+    padding-top: 9px;
+  }
+
+  .contact-form-wrap form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 26px;
+  }
+
+  .contact-form-wrap label {
+    margin: 19px 0 8px;
+    color: rgba(255, 255, 255, 0.77);
+    font-size: 11px;
+  }
+
+  .contact-form-wrap input,
+  .contact-form-wrap textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+    border-radius: 0;
+    outline: none;
+    padding: 8px 0 12px;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    resize: vertical;
+  }
+
+  .contact-form-wrap input:focus,
+  .contact-form-wrap textarea:focus {
+    border-color: #f5b5a5;
+  }
+
+  .contact-form-wrap input:focus-visible,
+  .contact-form-wrap textarea:focus-visible,
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #f5b5a5;
+    outline-offset: 4px;
+  }
+
+  .submit-button {
+    align-self: flex-start;
+    margin-top: 29px;
+    cursor: pointer;
+  }
+
+  .honeypot {
+    position: absolute;
+    left: -5000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .site-footer {
+    display: flex;
+    min-height: 88px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7.1%;
+    background: #332139;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 10px;
+  }
+
+  .footer-wordmark {
+    color: white;
+    font-size: 13px;
+  }
+
+  .footer-wordmark .wordmark-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+
+  .thanks-page {
+    display: grid;
+    min-height: 100svh;
+    place-items: center;
+    padding: 32px;
+    text-align: center;
+  }
+
+  .thanks-page > div {
+    max-width: 560px;
+  }
+
+  .thanks-page h1 {
+    margin: 23px 0;
+    font-family: var(--serif);
+    font-size: clamp(48px, 8vw, 86px);
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    line-height: 0.95;
+  }
+
+  .thanks-page p:not(.eyebrow) {
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  [data-reveal] {
+    transition:
+      opacity 650ms ease,
+      transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  html.motion-ready [data-reveal] {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  html.motion-ready [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 850px) {
+    .section-wrap {
+      width: 84%;
+    }
+
+    .site-header {
+      padding: 0 6%;
+    }
+
+    .main-nav {
+      margin-left: 0;
+    }
+
+    .course {
+      grid-template-columns: 1fr 1.5fr;
+      gap: 6%;
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+
+    .course-label {
+      padding-top: 10px;
+    }
+
+    .course-stamp {
+      position: absolute;
+      right: 0;
+      bottom: 38px;
+      width: 78px;
+    }
+
+    .course-main {
+      padding-right: 88px;
+    }
+
+    .intro {
+      grid-template-columns: 0.7fr 1.6fr;
+      gap: 5%;
+      padding-top: 105px;
+      padding-bottom: 105px;
+    }
+
+    .contact-inner {
+      gap: 9%;
+    }
+
+    .application {
+      grid-template-columns: 0.6fr 1.45fr;
+    }
+
+    .application-mark {
+      position: absolute;
+      top: 115px;
+      right: -20px;
+      z-index: -0;
+      font-size: 260px;
+      pointer-events: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    html {
+      scroll-padding-top: 66px;
+    }
+
+    .site-header {
+      min-height: 68px;
+      padding: 0 6%;
+    }
+
+    .wordmark {
+      gap: 7px;
+      font-size: 13px;
+    }
+
+    .wordmark-icon {
+      width: 27px;
+      height: 27px;
+      font-size: 16px;
+    }
+
+    .main-nav {
+      gap: 10px;
+      font-size: 9px;
+    }
+
+    .header-cta {
+      gap: 9px;
+      font-size: 11px;
+    }
+
+    .hero {
+      min-height: 750px;
+      min-height: 100svh;
+      max-height: 900px;
+    }
+
+    .hero-image {
+      background-position: 58% center;
+    }
+
+    .hero-shade {
+      background: linear-gradient(90deg, rgba(15, 23, 21, 0.77), rgba(15, 23, 21, 0.29));
+    }
+
+    .hero-content {
+      width: 88%;
+      margin: 35px 0 0 7%;
+    }
+
+    .hero h1 {
+      margin-top: 24px;
+      font-size: clamp(66px, 17vw, 96px);
+    }
+
+    .hero-copy {
+      max-width: 300px;
+      font-size: 13px;
+    }
+
+    .hero .button {
+      max-width: 100%;
+      gap: 17px;
+      font-size: 11px;
+    }
+
+    .hero-note {
+      right: 7%;
+      bottom: 7%;
+      font-size: 10px;
+    }
+
+    .hero-index {
+      display: none;
+    }
+
+    .section-wrap {
+      width: 86%;
+    }
+
+    .course {
+      display: flex;
+      min-height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 31px;
+      padding-top: 75px;
+      padding-bottom: 76px;
+    }
+
+    .course-label {
+      padding: 0;
+    }
+
+    .course-dates {
+      margin-top: 12px;
+      font-size: 21px;
+    }
+
+    .course-main {
+      padding-right: 0;
+    }
+
+    .course-main h2 {
+      font-size: clamp(41px, 12vw, 58px);
+    }
+
+    .course-stamp {
+      right: -4px;
+      bottom: 26px;
+      width: 66px;
+      font-size: 10px;
+    }
+
+    .button-row {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .intro {
+      display: block;
+      padding-top: 86px;
+      padding-bottom: 88px;
+    }
+
+    .intro-aside {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 63px;
+    }
+
+    .intro-copy h2 {
+      margin: 0 0 19px;
+      font-size: clamp(76px, 19vw, 105px);
+    }
+
+    .intro-lead {
+      font-size: 19px;
+    }
+
+    .service-item {
+      grid-template-columns: 32px 1fr 15px;
+      gap: 8px;
+      padding: 19px 0;
+    }
+
+    .service-item h3 {
+      font-size: 12px;
+    }
+
+    .portrait-band {
+      min-height: 0;
+      grid-template-columns: 1fr;
+    }
+
+    .portrait-photo {
+      min-height: 340px;
+      background-position: center 36%;
+    }
+
+    .portrait-message {
+      min-height: 300px;
+      padding: 50px 8%;
+    }
+
+    .portrait-quote {
+      margin: 24px 0;
+      font-size: 47px;
+    }
+
+    .application {
+      display: block;
+      min-height: 0;
+      padding-top: 76px;
+      padding-bottom: 84px;
+    }
+
+    .application-top {
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 63px;
+    }
+
+    .application-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .application h2 {
+      font-size: clamp(77px, 19vw, 106px);
+    }
+
+    .application-mark {
+      top: 165px;
+      right: -22px;
+      font-size: 220px;
+    }
+
+    .application-form {
+      margin-top: 60px;
+      padding-top: 30px;
+    }
+
+    .application-form-heading {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-inner {
+      display: block;
+      padding-top: 78px;
+      padding-bottom: 78px;
+    }
+
+    .contact-heading h2 {
+      margin: 25px 0;
+      font-size: 81px;
+    }
+
+    .contact-phone,
+    .contact-email {
+      font-size: 24px;
+    }
+
+    .contact-form-wrap {
+      margin-top: 65px;
+    }
+
+    .contact-form-wrap form {
+      margin-top: 13px;
+    }
+
+    .site-footer {
+      min-height: 100px;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      padding: 20px 7%;
+    }
+
+    .site-footer > span {
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .main-nav {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script>
+  const revealItems = document.querySelectorAll<HTMLElement>("[data-reveal]");
+
+  if ("IntersectionObserver" in window) {
+    document.documentElement.classList.add("motion-ready");
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+  }
+</script>
