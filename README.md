@@ -29,6 +29,10 @@ npm run build
 
 Formuláře `kontakt` a `recenze` odesílá Netlify Forms na stránku `/dekujeme/` a obsahují honeypot proti jednoduchému spamu. Před nasazením domény je potřeba provést zkušební odeslání a ověřit notifikační e-mail. Dostupnost formulářů a limity se řídí aktuálním tarifem Netlify.
 
+## Ceník a dokumenty
+
+Ceník odpovídá položkám uvedeným na původním webu. PDF formulář žádosti o přijetí a lékařský posudek jsou uložené v `public/dokumenty/`, takže se stahují přímo z webu. Při změně cen nebo formulářů upravte sekci `#cenik` v `src/pages/index.astro` a odpovídající PDF v `public/dokumenty/`.
+
 ## Recenze
 
 Recenze odeslané formulářem „Podělte se o Vaši zkušenost“ se na web nezveřejňují automaticky – přijdou do Netlify (**Forms → recenze**) a e-mailem. Zveřejnění recenze: přidejte položku do pole `reviews` na začátku souboru `src/pages/index.astro` (jméno a odstavce textu), commitněte a pushněte.

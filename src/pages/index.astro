@@ -1,8 +1,8 @@
 ---
 const applicationUrl = "https://jezdiskockou.moje-autoskola.cz/prihlaska.php";
 const applicationEmbedUrl = `${applicationUrl}?iframe=1`;
-const applicationPdf =
-  "https://md.gov.cz/getattachment/Dokumenty/Silnicni-doprava/Ridicske-prukazy,Autoskoly/Zadost-o-prijeti-k-vyuce-a-vycviku/zaDOSTOPrIJETikvyuceavycviku2013-(1).pdf.aspx?lang=cs-CZ";
+const applicationPdf = "/dokumenty/zadost-o-prijeti-k-vyuce-a-vycviku.pdf";
+const medicalPdf = "/dokumenty/lekarsky-posudek-zdravotni-zpusobilosti.pdf";
 const phone = "+420 773 622 333";
 const phoneLink = "+420773622333";
 const email = "d.vitekerova@gmail.com";
@@ -100,6 +100,7 @@ const initials = (name: string) =>
       <nav class="main-nav" aria-label="Hlavní navigace">
         <a href="#o-mne">O mně</a>
         <a class="nav-wide-only" href="#vyuka">Výuka</a>
+        <a href="#cenik">Ceník</a>
         <a href="#reference">Reference</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -122,7 +123,7 @@ const initials = (name: string) =>
           <a class="button button-light" href="#kurz">
             Jezdi jako kočka! Jezdi s kočkou! <span aria-hidden="true">↓</span>
           </a>
-          <span class="hero-index">01 <i></i> 05</span>
+          <span class="hero-index">01 <i></i> 06</span>
         </div>
         <div class="hero-note">
           <span class="hero-note-mark" aria-hidden="true">✳</span>
@@ -141,7 +142,7 @@ const initials = (name: string) =>
             <a class="button button-dark" href="#prihlaska">
               přihlášky zde: <span aria-hidden="true">↓</span>
             </a>
-            <a class="text-link" href={applicationPdf} target="_blank" rel="noreferrer">
+            <a class="text-link" href={applicationPdf} download>
               Stáhnout žádost o přijetí <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -156,7 +157,7 @@ const initials = (name: string) =>
         <div class="about-inner section-wrap">
           <div class="about-top" data-reveal>
             <p class="eyebrow"><span></span> O mně</p>
-            <span class="section-number">02 / 05</span>
+            <span class="section-number">02 / 06</span>
           </div>
           <figure class="about-figure" data-reveal>
             <img
@@ -220,7 +221,7 @@ const initials = (name: string) =>
       <section class="intro section-wrap" id="vyuka" aria-labelledby="intro-title">
         <div class="intro-aside" data-reveal>
           <p class="eyebrow"><span></span> Jezdi s Kočkou</p>
-          <span class="section-number">03 / 05</span>
+          <span class="section-number">03 / 06</span>
         </div>
         <div class="intro-copy" data-reveal>
           <h2 id="intro-title">Jezdi jako<br />kočka<span class="accent">.</span></h2>
@@ -264,7 +265,7 @@ const initials = (name: string) =>
               <p class="eyebrow"><span></span> Reference</p>
               <h2 id="reviews-title">Reference<span class="accent">.</span></h2>
             </div>
-            <span class="section-number">04 / 05</span>
+            <span class="section-number">04 / 06</span>
           </div>
           <div class="review-grid">
             {
@@ -318,10 +319,68 @@ const initials = (name: string) =>
         </div>
       </section>
 
+      <section class="pricing section-wrap" id="cenik" aria-labelledby="pricing-title">
+        <div class="pricing-heading" data-reveal>
+          <div>
+            <p class="eyebrow"><span></span> Ceník</p>
+            <h2 id="pricing-title">Jasně a<br /><em>férově.</em></h2>
+          </div>
+          <span class="section-number">05 / 06</span>
+        </div>
+        <div class="price-list" aria-label="Ceník autoškoly">
+          <article class="price-item" data-reveal>
+            <h3>Kondiční jízdy Brno</h3>
+            <p class="price">1 500 <span>Kč</span></p>
+            <p class="price-detail">90 min</p>
+          </article>
+          <article class="price-item" data-reveal>
+            <h3>Individuální výuka skupiny B – kompletní výcvik</h3>
+            <p class="price">23 700 <span>Kč</span></p>
+            <p class="price-detail">28 jízd</p>
+          </article>
+          <article class="price-item" data-reveal>
+            <h3>Doplňková jízda před zkouškou</h3>
+            <p class="price">1 200 <span>Kč</span></p>
+            <p class="price-detail">90 min</p>
+          </article>
+          <article class="price-item" data-reveal>
+            <h3>Opravná zkouška</h3>
+            <p class="price">500 <span>Kč</span></p>
+            <p class="price-detail">&nbsp;</p>
+          </article>
+        </div>
+        <div class="downloads" id="dokumenty" data-reveal>
+          <div class="downloads-intro">
+            <p class="eyebrow"><span></span> Ke stažení</p>
+            <h3>Dokumenty<br />k přihlášení</h3>
+            <p>
+              Žádost vytiskněte oboustranně na jeden list. Posudek zdravotní způsobilosti vyplní váš
+              praktický lékař a nesmí být starší než tři měsíce.
+            </p>
+          </div>
+          <div class="download-list">
+            <a class="download-link" href={applicationPdf} download>
+              <span>
+                <strong>Žádost o přijetí k výuce a výcviku</strong>
+                <small>PDF · formulář pro přihlášení do autoškoly</small>
+              </span>
+              <span class="download-icon" aria-hidden="true">↓</span>
+            </a>
+            <a class="download-link" href={medicalPdf} download>
+              <span>
+                <strong>Posudek o zdravotní způsobilosti</strong>
+                <small>PDF · potvrzení od praktického lékaře</small>
+              </span>
+              <span class="download-icon" aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="application section-wrap" id="prihlaska" aria-labelledby="application-title">
         <div class="application-top" data-reveal>
           <p class="eyebrow"><span></span> Přihláška</p>
-          <span class="section-number">05 / 05</span>
+          <span class="section-number">06 / 06</span>
         </div>
         <div class="application-content" data-reveal>
           <h2 id="application-title">První krok<br />je <em>váš.</em></h2>
@@ -329,7 +388,7 @@ const initials = (name: string) =>
             <a class="button button-dark" href="#online-prihlaska">
               Vyplnit přihlášku <span aria-hidden="true">↓</span>
             </a>
-            <a class="text-link" href={applicationPdf} target="_blank" rel="noreferrer">
+            <a class="text-link" href={applicationPdf} download>
               Žádost o přijetí k výuce a výcviku <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -1187,6 +1246,155 @@ const initials = (name: string) =>
     cursor: pointer;
   }
 
+  .pricing {
+    padding-top: 130px;
+    padding-bottom: 125px;
+  }
+
+  .pricing-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 58px;
+  }
+
+  .pricing-heading h2 {
+    margin: 27px 0 0;
+    font-family: var(--serif);
+    font-size: clamp(68px, 9.3vw, 124px);
+    font-weight: 500;
+    letter-spacing: -0.08em;
+    line-height: 0.85;
+  }
+
+  .pricing-heading h2 em {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .price-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 34px;
+  }
+
+  .price-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 10px 24px;
+    border-top: 1px solid var(--line);
+    padding: 25px 0 22px;
+  }
+
+  .price-item h3 {
+    align-self: center;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .price {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(27px, 3.2vw, 38px);
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+  }
+
+  .price span {
+    color: var(--accent);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .price-detail {
+    grid-column: 2;
+    grid-row: 2;
+    margin: -7px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: right;
+  }
+
+  .downloads {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 8%;
+    margin-top: 84px;
+    border-top: 1px solid var(--line);
+    padding-top: 58px;
+  }
+
+  .downloads-intro h3 {
+    margin: 22px 0 14px;
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+    letter-spacing: -0.06em;
+    line-height: 0.98;
+  }
+
+  .downloads-intro > p:last-child {
+    max-width: 380px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .download-list {
+    align-self: center;
+    border-top: 1px solid var(--line);
+  }
+
+  .download-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+    padding: 23px 0;
+    transition: color 180ms ease;
+  }
+
+  .download-link:hover {
+    color: var(--accent);
+  }
+
+  .download-link strong,
+  .download-link small {
+    display: block;
+  }
+
+  .download-link strong {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .download-link small {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .download-icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--accent);
+    font-size: 18px;
+  }
+
   .portrait-band {
     position: relative;
     display: grid;
@@ -1572,6 +1780,21 @@ const initials = (name: string) =>
       columns: 2;
     }
 
+    .price-list {
+      gap: 0 22px;
+    }
+
+    .price-item {
+      gap: 8px 12px;
+    }
+
+    .price-item h3 {
+      font-size: 13px;
+    }
+
+    .downloads {
+      gap: 5%;
+    }
 
     .application {
       grid-template-columns: 0.6fr 1.45fr;
@@ -1829,6 +2052,46 @@ const initials = (name: string) =>
 
     .review-form .button {
       grid-column: auto;
+    }
+
+    .pricing {
+      padding-top: 82px;
+      padding-bottom: 82px;
+    }
+
+    .pricing-heading {
+      margin-bottom: 38px;
+    }
+
+    .pricing-heading h2 {
+      font-size: clamp(66px, 17vw, 96px);
+    }
+
+    .price-list {
+      grid-template-columns: 1fr;
+    }
+
+    .price-item {
+      gap: 8px 18px;
+    }
+
+    .price-item h3 {
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 31px;
+    }
+
+    .downloads {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 55px;
+      padding-top: 42px;
+    }
+
+    .downloads-intro h3 {
+      font-size: 40px;
     }
 
     .portrait-photo {
